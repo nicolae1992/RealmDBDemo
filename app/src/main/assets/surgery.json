@@ -1,0 +1,226 @@
+[
+  {
+    "id": 1,
+    "schedule_id": 123,
+    "surgeon": {
+      "id": 1,
+      "code": 1,
+      "title": "Test title surgeon 123",
+      "forename": "test surgeon forename",
+      "surname": "test  surgeon surname"
+    },
+    "procedure": {
+      "id": 1,
+      "code": 2,
+      "name": "procedure test name",
+      "description": "This is Surname",
+      "body_side": " body side"
+    },
+    "second_procedure": [
+      {
+        "id": 1,
+        "code": 2,
+        "name": "procedure test name",
+        "description": "This is Surname"
+      },
+      {
+        "id": 2,
+        "code": 3,
+        "name": "procedure test name 2",
+        "description": "This is Surname 2"
+      },
+      {
+        "id": 3,
+        "code": 3,
+        "name": "procedure test name 2",
+        "description": "This is Surname 2"
+      },
+      {
+        "id": 4,
+        "code": 4,
+        "name": "procedure test name 2",
+        "description": "This is Surname 2"
+      }
+    ],
+    "theatre": {
+      "id": 1,
+      "code": 23,
+      "description": "threatr test demo"
+    },
+    "start_time": "24-02-2022 01:55:50",
+    "end_time": "03-03-2022 01:55:50",
+    "patient_id": 1,
+    "GRSN": "grsn 1",
+    "notes": " Loream notes",
+    "state": "Draft",
+    "sync_state": "Pending"
+  },
+  {
+    "id": 2,
+    "schedule_id": 132,
+    "surgeon": {
+      "id": 2,
+      "code": 2,
+      "title": "Test title surgeon 123444",
+      "forename": "test surgeon forename",
+      "surname": "test  surgeon surname"
+    },
+    "procedure": {
+      "id": 2,
+      "code": 2,
+      "name": " 2 procedure test name 2",
+      "description": "2 This is Surname 2",
+      "body_side": "  2 body side"
+    },
+    "second_procedure": [
+      {
+        "id": 5,
+        "code": 5,
+        "name": "5 procedure test name 2",
+        "description": "5 procedure test name 2"
+      },
+      {
+        "id": 6,
+        "code": 6,
+        "name": "6 procedure test name 2",
+        "description": "6 This is Surname 2"
+      },
+      {
+        "id": 7,
+        "code": 7,
+        "name": "7 procedure test name 2",
+        "description": "7 This is Surname 2"
+      },
+      {
+        "id": 8,
+        "code": 8,
+        "name": " 8 procedure test name 2",
+        "description": "8 This is Surname 2"
+      }
+    ],
+    "theatre": {
+      "id": 2,
+      "code": 226,
+      "description": "2 threatr test demo"
+    },
+    "start_time": "28-02-2022 01:55:50",
+    "end_time": "01-03-2022 01:55:50",
+    "patient_id": 2,
+    "GRSN": "grsn 1",
+    "notes": " Loream notes",
+    "state": "In Progress",
+    "sync_state": "Synced"
+  },
+  {
+    "id": 3,
+    "schedule_id": 133,
+    "surgeon": {
+      "id": 3,
+      "code": 4,
+      "title": "Test title surgeon 123444",
+      "forename": "test surgeon forename",
+      "surname": "test  surgeon surname"
+    },
+    "procedure": {
+      "id": 3,
+      "code": 3,
+      "name": " 2 procedure test name 2",
+      "description": "2 This is Surname 2",
+      "body_side": "  2 body side"
+    },
+    "second_procedure": [
+      {
+        "id": 9,
+        "code": 10,
+        "name": "5 procedure test name 2",
+        "description": "5 procedure test name 2"
+      },
+      {
+        "id": 10,
+        "code": 11,
+        "name": "6 procedure test name 2",
+        "description": "6 This is Surname 2"
+      },
+      {
+        "id": 11,
+        "code": 21,
+        "name": "7 procedure test name 2",
+        "description": "7 This is Surname 2"
+      },
+      {
+        "id": 12,
+        "code": 12,
+        "name": " 8 procedure test name 2",
+        "description": "8 This is Surname 2"
+      }
+    ],
+    "theatre": {
+      "id": 5,
+      "code": 226,
+      "description": "2 threatr test demo"
+    },
+    "start_time": "28-02-2022 01:55:50",
+    "end_time": "01-03-2022 01:55:50",
+    "patient_id": 2,
+    "GRSN": "grsn 1",
+    "notes": " Loream notes 10000000",
+    "state": "Cancelled",
+    "sync_state": "Error"
+  },
+  {
+    "id": 3,
+    "schedule_id": 133,
+    "surgeon": {
+      "id": 4,
+      "code": 4,
+      "title": "Test title surgeon 123444",
+      "forename": "test surgeon forename",
+      "surname": "test  surgeon surname"
+    },
+    "procedure": {
+      "id": 13,
+      "code": 3,
+      "name": " 15 note",
+      "description": "2 This is Surname 2",
+      "body_side": "  2 body side"
+    },
+    "second_procedure": [
+      {
+        "id": 14,
+        "code": 10,
+        "name": "14 procedure test name 2",
+        "description": "5 procedure test name 2"
+      },
+      {
+        "id": 15,
+        "code": 11,
+        "name": "15 procedure test name 2",
+        "description": "6 This is Surname 2"
+      },
+      {
+        "id": 16,
+        "code": 21,
+        "name": "16 procedure test name 2",
+        "description": "7 This is Surname 2"
+      },
+      {
+        "id": 17,
+        "code": 12,
+        "name": " 17 procedure test name 2",
+        "description": "8 This is Surname 2"
+      }
+    ],
+    "theatre": {
+      "id": 6,
+      "code": 227,
+      "description": "2 threatr test demo"
+    },
+    "start_time": "29-02-2022 01:55:50",
+    "end_time": "01-03-2022 01:55:50",
+    "patient_id": 2,
+    "GRSN": "grsn 1",
+    "notes": " Loream notes 20000000",
+    "state": "Cancelled",
+    "sync_state": "Error"
+  }
+]
