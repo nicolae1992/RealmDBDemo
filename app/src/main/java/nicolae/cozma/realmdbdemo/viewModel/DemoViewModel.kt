@@ -4,8 +4,10 @@ import android.content.Context
 import androidx.lifecycle.ViewModel
 import io.realm.Realm
 import io.realm.RealmResults
+import io.realm.Sort
 import nicolae.cozma.realmdbdemo.data.local.entity.SurgeryModel
 import nicolae.cozma.realmdbdemo.data.local.entity.Theatre
+import nicolae.cozma.realmdbdemo.model.State
 import nicolae.cozma.realmdbdemo.utils.loadJsonFromStream
 
 class DemoViewModel : ViewModel() {
@@ -50,10 +52,11 @@ class DemoViewModel : ViewModel() {
      *  @see io.realm.RealmResults
      * */
     fun getSurgeryWithStateError(): RealmResults<SurgeryModel> {
-        return realm.where(SurgeryModel::class.java).equalTo("state", "Cancelled").findAll()
+        return realm.where(SurgeryModel::class.java).equalTo("state", State.CANCELLED.name).findAll()
     }
 
-    /**Get Theatre
+    /**
+     * Get object {@link Theatre}
      * return Theatre
      * this function findFirst() find first object and
      *  @return {@code Theatre} or {@code null}
@@ -61,6 +64,16 @@ class DemoViewModel : ViewModel() {
      * */
     fun getTheatre(): Theatre? {
        return realm.where(Theatre::class.java).findFirst()
+    }
+
+    /**
+     * Get All items {@link SurgeryModel}
+     *  Sort items by DataTime in ASCENDING
+     *  @return {@code RealmResults}
+     *  @see io.realm.RealmResults
+     * */
+    fun sortByDate(): RealmResults<SurgeryModel> {
+       return realm.where(SurgeryModel::class.java).sort("start_time", Sort.ASCENDING).findAll()
     }
 
     override fun onCleared() {

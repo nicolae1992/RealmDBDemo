@@ -5,7 +5,7 @@ import io.realm.Realm
 import io.realm.RealmConfiguration
 
 class App : Application() {
-    private val realmVersion = 4L
+    private val realmVersion = 5L
     override fun onCreate() {
         super.onCreate()
 

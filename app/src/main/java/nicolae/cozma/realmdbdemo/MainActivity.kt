@@ -26,8 +26,11 @@ class MainActivity : AppCompatActivity() {
         /* viewModel.getTheatre().apply {
              println("item -> ..${this}")
          }*/
-        viewModel.getSurgeryWithStateError().toList().forEach {
+        /*viewModel.getSurgeryWithStateError().toList().forEach {
             println("list -> ..${it.id}")
+        }*/
+        viewModel.sortByDate().toList().forEach {
+            println("list sorted -> ..${it.start_time}")
         }
     }
 
