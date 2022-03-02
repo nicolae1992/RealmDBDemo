@@ -54,8 +54,8 @@ class DemoViewModel : ViewModel() {
     }
 
     /**Get Theatre
-     * return RealmResults<SurgeryModel>
-     * this function findFirst() and
+     * return Theatre
+     * this function findFirst() find first object and
      *  @return {@code Theatre} or {@code null}
      *  @see  nicolae.cozma.realmdbdemo.data.local.entity.Theatre
      * */

@@ -17,14 +17,17 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.readAndInsertDemo(this)
         //viewModel.insertDatabase(createItemTree(3, 2, "description test"))
-        // viewModel.insertDatabase(createItemTree(4, 5, "test description description "))
+        //viewModel.insertDatabase(createItemTree(4, 5, "test description description "))
 
-       /* viewModel.getAllSurgery().toList().forEach {
-            println("error -> ..${it.notes}")
-        }*/
+        /* viewModel.getAllSurgery().toList().forEach {
+             println("list -> ..${it.notes}")
+         }*/
 
-        viewModel.getTheatre().apply {
-            println("error -> ..${this}")
+        /* viewModel.getTheatre().apply {
+             println("item -> ..${this}")
+         }*/
+        viewModel.getSurgeryWithStateError().toList().forEach {
+            println("list -> ..${it.id}")
         }
     }
 
