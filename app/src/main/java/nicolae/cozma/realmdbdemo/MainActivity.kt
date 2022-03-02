@@ -29,9 +29,18 @@ class MainActivity : AppCompatActivity() {
         /*viewModel.getSurgeryWithStateError().toList().forEach {
             println("list -> ..${it.id}")
         }*/
-        viewModel.sortByDate().toList().forEach {
+       /* viewModel.sortByDate().toList().forEach {
             println("list sorted -> ..${it.start_time}")
-        }
+        }*/
+       /* viewModel.getSurgeryWithCode(10).forEach {
+            it.second_procedure.forEach { item->
+                println("code -> ..${item.code}")
+            }
+        }*/
+
+       /* viewModel.customQuery().forEach {
+            println("code -> ..${it.notes}")
+        }*/
     }
 
     private fun createItemTree(id: Int, code: Int, description: String): Theatre {
