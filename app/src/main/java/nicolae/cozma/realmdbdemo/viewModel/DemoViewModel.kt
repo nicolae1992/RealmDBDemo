@@ -113,7 +113,6 @@ class DemoViewModel : ViewModel() {
 
     /**
      * Custom Query
-     *  with pagination
      *  @return {@RealmResults}
      *  @see io.realm.RealmResults
      * */
