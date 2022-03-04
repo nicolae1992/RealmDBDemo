@@ -1,17 +1,16 @@
-package nicolae.cozma.realmdbdemo.data.local.entity
+package nicolae.cozma.realmdbdemo.data.local.entity.procedure
 
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey
 import java.util.Date;
 import org.bson.types.ObjectId;
-open class Theatre(
+open class ProcedureSurgeon(
     @PrimaryKey var _id: ObjectId? = null,
-    var Code: String? = null,
     var CreatedOn: Date? = null,
-    var Description: String? = null,
-    var GlobalLocationNumber: String? = null,
     var InternId: String? = null,
     var LastUpdatedOn: Date? = null,
-    var LocationId: String? = null,
+    var ProcedureId: String? = null,
+    var ProcedureSurgeonId: String? = null,
+    var SurgeonId: String? = null,
     var _partition: String = ""
-): RealmObject() {}
+): RealmObject()

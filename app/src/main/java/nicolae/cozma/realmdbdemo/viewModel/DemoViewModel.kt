@@ -3,11 +3,9 @@ package nicolae.cozma.realmdbdemo.viewModel
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import io.realm.Realm
-import io.realm.RealmQuery
 import io.realm.RealmResults
 import io.realm.Sort
-import kotlinx.coroutines.flow.Flow
-import nicolae.cozma.realmdbdemo.data.local.entity.SurgeryModel
+import nicolae.cozma.realmdbdemo.data.local.entity.surgery.Surgery
 import nicolae.cozma.realmdbdemo.data.local.entity.Theatre
 import nicolae.cozma.realmdbdemo.model.State
 import nicolae.cozma.realmdbdemo.utils.loadJsonFromStream
@@ -44,8 +42,8 @@ class DemoViewModel : ViewModel() {
      *  @return {@code RealmResults}
      *  @see io.realm.RealmResults
      * */
-    fun getAllSurgery(): RealmResults<SurgeryModel> {
-        return realm.where(SurgeryModel::class.java).findAll()
+    fun getAllSurgery(): RealmResults<Surgery> {
+        return realm.where(Surgery::class.java).findAll()
     }
 
     /**
@@ -54,8 +52,8 @@ class DemoViewModel : ViewModel() {
      *  @return {@code RealmResults}
      *  @see io.realm.RealmResults
      * */
-    fun getSurgeryWithStateError(): RealmResults<SurgeryModel> {
-        return realm.where(SurgeryModel::class.java).equalTo("state", State.CANCELLED.name)
+    fun getSurgeryWithStateError(): RealmResults<Surgery> {
+        return realm.where(Surgery::class.java).equalTo("state", State.CANCELLED.name)
             .findAll()
     }
 
@@ -66,8 +64,8 @@ class DemoViewModel : ViewModel() {
      *  @return {@code RealmResults}
      *  @see io.realm.RealmResults
      * */
-    fun getSurgeryWithCode(codeProcedure: Int): RealmResults<SurgeryModel> {
-        return realm.where(SurgeryModel::class.java)
+    fun getSurgeryWithCode(codeProcedure: Int): RealmResults<Surgery> {
+        return realm.where(Surgery::class.java)
             .equalTo("second_procedure.code", codeProcedure)
             .equalTo("second_procedure.code", codeProcedure + 1)
             .findAll()
@@ -90,8 +88,8 @@ class DemoViewModel : ViewModel() {
      *  @return {@RealmResults}
      *  @see io.realm.RealmResults
      * */
-    fun sortByDate(): RealmResults<SurgeryModel> {
-        return realm.where(SurgeryModel::class.java).sort("start_time", Sort.ASCENDING).findAll()
+    fun sortByDate(): RealmResults<Surgery> {
+        return realm.where(Surgery::class.java).sort("start_time", Sort.ASCENDING).findAll()
     }
 
     /**
@@ -102,9 +100,8 @@ class DemoViewModel : ViewModel() {
      *  @return {@RealmResults}
      *  @see io.realm.RealmResults
      * */
-    fun getPerPage(perPage: Int, limit: Int): List<SurgeryModel> {
-        // val personQuery = RealmQuery { realm.where<SurgeryModel>(SurgeryModel::class.java) }
-        return realm.where(SurgeryModel::class.java)
+    fun getPerPage(perPage: Int, limit: Int): List<Surgery> {
+        return realm.where(Surgery::class.java)
             .limit(perPage * limit.toLong())
             .findAll()
             .toList()
@@ -116,8 +113,8 @@ class DemoViewModel : ViewModel() {
      *  @return {@RealmResults}
      *  @see io.realm.RealmResults
      * */
-    public fun customQuery(): RealmResults<SurgeryModel> {
-        return realm.where(SurgeryModel::class.java)
+    public fun customQuery(): RealmResults<Surgery> {
+        return realm.where(Surgery::class.java)
             .rawPredicate("id = 3 SORT(start_time ASCENDING) LIMIT(3)").findAll()
     }
 

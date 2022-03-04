@@ -4,14 +4,16 @@ import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey
 import java.util.Date;
 import org.bson.types.ObjectId;
-open class Theatre(
+
+open class ItemBarcode(
     @PrimaryKey var _id: ObjectId? = null,
-    var Code: String? = null,
+    var CreatedBy: String? = null,
     var CreatedOn: Date? = null,
-    var Description: String? = null,
-    var GlobalLocationNumber: String? = null,
     var InternId: String? = null,
+    var ItemId: String? = null,
+    var LastUpdatedBy: String? = null,
     var LastUpdatedOn: Date? = null,
-    var LocationId: String? = null,
+    var RawData: String? = null,
+    var UDI: String? = null,
     var _partition: String = ""
-): RealmObject() {}
+) : RealmObject()
